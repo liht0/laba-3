@@ -1,29 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 
-int main()
-{
-	int i=0;
-	char s[80];
+int main(){
+	char stroka [80];
+	int r = 0;
 	
-	printf("enter ur string: ");
-	fgets(s, 80, stdin);
-	while (i<strlen(s))
-	{
-		if (s[i]=='a' || s[i]=='b')
-		{
-			if (s[i]=='a')
-			{
-				s[i]='A';
-			}
-			else
-			{
-				s[i]='B';
-			}
-		}
-		i++;
-		
+	printf ("Vvedite lubie 80 simvolov: ");
+	if (fgets(stroka,sizeof(stroka),stdin)==NULL){
+		printf ("Vvedite snova\n");
+		return 1;
 	}
-	printf("%s",s);
+	stroka[strcspn(stroka, "\n")] = '\0';
+	size_t m = strlen(stroka);
+	for (r=0; r<m; r++){
+		if (stroka [r] == 'a'){
+			stroka [r] = 'A';
+	}
+		if (stroka [r] == 'b'){
+			stroka [r] = 'B';
+	}
+	}
+	printf("Rezultat: %s\n", stroka);
 	return 0;
 }
