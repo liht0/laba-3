@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 int main(){
 	char stroka [80];
 	int r = 0;
