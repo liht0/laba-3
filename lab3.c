@@ -3,7 +3,6 @@
 int main(){
 	char stroka [80];
 	int r = 0;
-	
 	printf ("Vvedite lubie 80 simvolov: ");
 	if (fgets(stroka,sizeof(stroka),stdin)==NULL){
 		printf ("Vvedite snova\n");
