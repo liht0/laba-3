@@ -8,6 +8,7 @@ int main(){
 		printf ("Vvedite snova\n");
 		return 1;
 	}
+	
 	stroka[strcspn(stroka, "\n")] = '\0';
 	size_t m = strlen(stroka);
 	for (r=0; r<m; r++){
