@@ -13,6 +13,7 @@ int main(){
 	for (r=0; r<m; r++){
 		if (stroka [r] == 'a'){
 			stroka [r] = 'A';
+			
 	}
 		if (stroka [r] == 'b'){
 			stroka [r] = 'B';
